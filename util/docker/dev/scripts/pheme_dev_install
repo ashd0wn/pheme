@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+echo "Pheme Dev Install"
+
+# Set up permissions
+cd /var/pheme/www
+
+chown -R pheme:pheme .
+chmod 777 ./vendor/ ./web/static/
+
+pheme_install "$@"
+
+cd /var/pheme/www/frontend
+gosu pheme npm run build

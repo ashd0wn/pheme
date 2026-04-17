@@ -1,0 +1,2 @@
+0 * * * * * * pheme_cli pheme:sync:run
+0 30 */6 * * * * temp_cleanup

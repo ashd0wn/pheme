@@ -1,0 +1,65 @@
+SHELL=/bin/bash
+.PHONY: *
+
+list:
+	@LC_ALL=C $(MAKE) -pRrq -f $(lastword $(MAKEFILE_LIST)) : 2>/dev/null | awk -v RS= -F: '/^# File/,/^# Finished Make data base/ {if ($$1 !~ "^[#.]") {print $$1}}' | sort | egrep -v -e '^[^[:alnum:]]' -e '^$@$$'
+
+install: # Developer mode installation
+	bash ./docker.sh install-dev
+
+install-cloud-ide:
+	cp docker-compose.sample.yml docker-compose.yml
+	cp docker-compose.cloudide.yml docker-compose.override.yml
+
+	cp dev.env .env
+	cp pheme.dev.env pheme.env
+
+	docker-compose pull
+	docker-compose build
+	docker-compose run --rm web pheme_install "$@"
+
+up:
+	docker-compose up -d
+
+down:
+	docker-compose down
+
+restart: down up
+
+build: # Rebuild all containers and restart
+	docker-compose build
+	$(MAKE) restart
+
+post-update:
+	$(MAKE) down
+	docker-compose run --rm web gosu pheme composer install
+	docker-compose run --rm web pheme_cli pheme:setup --update
+	$(MAKE) up
+
+update: # Update everything (i.e. after a branch update)
+	docker-compose build
+	$(MAKE) post-update
+
+build-depot: # Rebuild all containers with Depot and restart
+	depot bake -f docker-compose.yml -f docker-compose.override.yml --load
+	$(MAKE) restart
+
+update-depot: # Update everything using Depot
+	depot bake -f docker-compose.yml -f docker-compose.override.yml --load
+	$(MAKE) post-update
+
+test:
+	docker-compose exec --user=pheme web composer run cleanup-and-test
+
+bash:
+	docker-compose exec --user=pheme web bash
+
+bash-root:
+	docker-compose exec web bash
+
+generate-locales:
+	docker-compose exec --user=pheme web pheme_cli locale:generate
+
+import-locales:
+	docker-compose exec --user=pheme web pheme_cli locale:import
+

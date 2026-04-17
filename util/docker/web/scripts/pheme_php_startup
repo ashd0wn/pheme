@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+if [ $(whoami) != 'pheme' ]; then
+    echo 'This script must be run as the "pheme" user. Rerunning...'
+    exec gosu pheme pheme_startup "$@"
+fi
+
+# Wait for services to spin up.
+php /var/pheme/www/bin/uptime_wait || exit 1
+
+# Initialize before running FPM
+pheme_cli pheme:setup --init || exit 1
+
+# Run initial Acme check
+pheme_cli pheme:acme:get-certificate || true
