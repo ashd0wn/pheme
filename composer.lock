@@ -156,16 +156,16 @@
             "time": "2024-01-29T19:12:30+00:00"
         },
         {
-            "name": "azuracast/nowplaying",
+            "name": "pheme/nowplaying",
             "version": "dev-main",
             "source": {
                 "type": "git",
-                "url": "https://github.com/AzuraCast/nowplaying.git",
+                "url": "https://github.com/pheme/nowplaying.git",
                 "reference": "a2e5ab46c51c5179f8993d693edf0843520dc145"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/AzuraCast/nowplaying/zipball/a2e5ab46c51c5179f8993d693edf0843520dc145",
+                "url": "https://api.github.com/repos/pheme/nowplaying/zipball/a2e5ab46c51c5179f8993d693edf0843520dc145",
                 "reference": "a2e5ab46c51c5179f8993d693edf0843520dc145",
                 "shasum": ""
             },
@@ -204,22 +204,22 @@
                     "email": "buster@busterneece.com"
                 }
             ],
-            "description": "A lightweight PHP adapter for viewing the current now playing data in Icecast and SHOUTcast 1/2. A part of the AzuraCast software suite.",
+            "description": "A lightweight PHP adapter for viewing the current now playing data in Icecast and SHOUTcast 1/2. A part of the pheme software suite.",
             "support": {
-                "issues": "https://github.com/AzuraCast/nowplaying/issues",
-                "source": "https://github.com/AzuraCast/nowplaying/tree/main"
+                "issues": "https://github.com/pheme/nowplaying/issues",
+                "source": "https://github.com/pheme/nowplaying/tree/main"
             },
             "funding": [
                 {
-                    "url": "https://github.com/AzuraCast",
+                    "url": "https://github.com/pheme",
                     "type": "github"
                 },
                 {
-                    "url": "https://opencollective.com/azuracast",
+                    "url": "https://opencollective.com/pheme",
                     "type": "open_collective"
                 },
                 {
-                    "url": "https://www.patreon.com/AzuraCast",
+                    "url": "https://www.patreon.com/pheme",
                     "type": "patreon"
                 }
             ],
@@ -12260,7 +12260,7 @@
                 "automad/automad": "<=1.10.9",
                 "awesome-support/awesome-support": "<=6.0.7",
                 "aws/aws-sdk-php": "<3.288.1",
-                "azuracast/azuracast": "<0.18.3",
+                "pheme/pheme": "<0.18.3",
                 "backdrop/backdrop": "<1.24.2",
                 "backpack/crud": "<3.4.9",
                 "bacula-web/bacula-web": "<8.0.0.0-RC2-dev",
@@ -14410,7 +14410,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "azuracast/nowplaying": 20,
+        "pheme/nowplaying": 20,
         "lstrojny/fxmlrpc": 20,
         "rlanvin/php-ip": 20,
         "supervisorphp/supervisor": 20,
