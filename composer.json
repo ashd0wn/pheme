@@ -33,7 +33,7 @@
         "ext-xml": "*",
         "ext-xmlreader": "*",
         "ext-xmlwriter": "*",
-        "pheme/nowplaying": "^1.0",
+        "pheme/nowplaying": "dev-main",
         "beberlei/doctrineextensions": "^1.2",
         "br33f/php-ga4-mp": "^0.1.2",
         "brick/math": "^0.11",
