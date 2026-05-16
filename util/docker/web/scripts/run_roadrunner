@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [ $(whoami) != 'pheme' ]; then
+    echo 'This script must be run as the "pheme" user. Rerunning...'
+    exec gosu pheme run_roadrunner "$@"
+fi
+
+dockerize -template "/var/pheme/rr.yaml.tmpl:/var/pheme/rr.yaml"
+
+pheme_php_startup
+
+# Run PHP-FPM
+exec rr serve -c /var/pheme/rr.yaml -w /var/pheme/www

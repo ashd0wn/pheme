@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="100%" height="100%" viewBox="0 0 520 120" version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xml:space="preserve"
+  style="fill-rule:evenodd;clip-rule:evenodd;">
+
+  <defs>
+    <linearGradient id="hexGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="rgb(109,40,217)" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="rgb(45,15,80)" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="hexClip">
+      <polygon points="50,3 91,26 91,74 50,97 9,74 9,26"/>
+    </clipPath>
+  </defs>
+
+  <g transform="translate(10,10)">
+
+    <!-- Hexagone fond -->
+    <polygon points="50,3 91,26 91,74 50,97 9,74 9,26"
+      fill="rgb(45,15,80)"/>
+    <polygon points="50,3 91,26 91,74 50,97 9,74 9,26"
+      fill="url(#hexGrad)"/>
+
+    <g clip-path="url(#hexClip)">
+
+      <!-- ══════════════════════════
+           COULEUR PRINCIPALE : rgb(109,40,217)
+           REHAUTS INTERNES    : rgb(45,15,80) fond
+           TRAITS CLAIRS       : rgb(220,210,255)
+           Style : formes pleines + découpes blanches internes
+           ══════════════════════════ -->
+
+      <!-- ── HARPE ── -->
+      <!-- Corps principal harpe — forme pleine violet -->
+      <!-- Pilier gauche -->
+      <path d="M 62,24 C 60,24 58,26 58,28 L 58,82 C 58,84 60,86 62,86 L 65,86 C 67,86 69,84 69,82 L 69,28 C 69,26 67,24 65,24 Z"
+        fill="rgb(139,92,246)"/>
+      <!-- Pied bas -->
+      <path d="M 58,82 L 58,88 C 58,90 60,92 62,92 L 82,92 C 84,92 86,90 86,88 L 86,82 Z"
+        fill="rgb(139,92,246)"/>
+      <!-- Socle pied — petite base -->
+      <path d="M 60,88 L 60,93 L 84,93 L 84,88 Z" fill="rgb(109,40,217)"/>
+      <path d="M 62,90 L 62,94 L 82,94 L 82,90 Z" fill="rgb(167,139,250)" opacity="0.4"/>
+      <!-- Colonne de résonance droite -->
+      <path d="M 81,38 C 79,38 77,40 77,42 L 77,82 L 86,82 L 86,42 C 86,40 84,38 82,38 Z"
+        fill="rgb(139,92,246)"/>
+      <!-- Cou — bloc épais -->
+      <path d="M 63,24 C 63,14 64,10 70,9 C 76,8 81,12 82,20 L 82,38 C 78,36 74,35 70,35 L 65,35 Z"
+        fill="rgb(139,92,246)"/>
+      <!-- Décoration haut du cou -->
+      <path d="M 70,9 C 74,8 79,11 81,16" fill="none" stroke="rgb(196,181,253)" stroke-width="1.5" stroke-linecap="round"/>
+
+      <!-- Cordes — fines, claires -->
+      <line x1="71" y1="35" x2="71" y2="82" stroke="rgb(220,210,255)" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="74" y1="34" x2="74" y2="82" stroke="rgb(220,210,255)" stroke-width="1.1" stroke-linecap="round"/>
+      <line x1="77" y1="36" x2="77" y2="82" stroke="rgb(220,210,255)" stroke-width="1.0" stroke-linecap="round"/>
+
+      <!-- ── PERSONNAGE ── -->
+      <!-- Style : silhouette violet foncé, rehauts clairs = zones claires internes -->
+
+      <!-- CHEVEUX — masse principale derrière, longue chevelure -->
+      <path d="
+        M 28,22
+        C 24,24 20,30 19,38
+        C 18,46 20,58 22,66
+        C 24,72 26,76 27,80
+        C 25,78 22,72 21,64
+        C 19,54 19,44 21,36
+        C 23,28 27,22 32,19
+        Z
+      " fill="rgb(109,40,217)"/>
+      <!-- Masse cheveux principale -->
+      <path d="
+        M 32,14
+        C 36,12 42,12 45,15
+        C 47,17 47,20 46,23
+        C 44,20 40,18 36,19
+        C 33,20 30,22 29,25
+        C 27,30 27,36 28,42
+        C 29,50 31,58 32,66
+        C 33,72 33,78 32,82
+        C 30,78 28,70 27,62
+        C 25,52 24,42 25,34
+        C 26,26 28,18 32,14
+        Z
+      " fill="rgb(109,40,217)"/>
+
+      <!-- VISAGE — peau = lavande clair -->
+      <!-- Forme tête profil droit -->
+      <path d="
+        M 33,15
+        C 37,13 43,13 46,16
+        C 49,19 50,23 49,27
+        C 48,31 46,34 45,36
+        C 44,38 44,39 45,41
+        C 44,43 42,44 40,44
+        C 38,44 36,43 35,41
+        C 33,39 33,36 34,33
+        C 33,30 32,27 32,23
+        C 32,19 32,16 33,15
+        Z
+      " fill="rgb(220,210,255)"/>
+      <!-- Ombre joue / mâchoire -->
+      <path d="M 35,38 C 36,41 38,43 40,43 C 42,43 44,42 45,40" fill="none" stroke="rgb(167,139,250)" stroke-width="0.8" stroke-linecap="round" opacity="0.6"/>
+      <!-- Œil -->
+      <path d="M 44,25 C 45,24 47,24 48,25 C 47,26 45,26 44,25 Z" fill="rgb(80,40,160)"/>
+      <!-- Paupière -->
+      <path d="M 43,24 C 45,22 48,23 49,25" fill="none" stroke="rgb(109,40,217)" stroke-width="1" stroke-linecap="round"/>
+      <!-- Nez -->
+      <path d="M 48,29 C 49,31 49,33 48,35" fill="none" stroke="rgb(180,160,230)" stroke-width="1" stroke-linecap="round" opacity="0.7"/>
+      <!-- Lèvres -->
+      <path d="M 45,37 C 46,38 47,38 48,37" fill="rgb(196,181,253)" opacity="0.8"/>
+      <path d="M 45,37 C 46,39 47,39 48,37" fill="none" stroke="rgb(150,120,210)" stroke-width="0.7"/>
+
+      <!-- Diadème -->
+      <path d="M 34,17 C 38,14 43,14 46,17" fill="none" stroke="rgb(196,181,253)" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M 40,13 L 40,16" stroke="rgb(220,210,255)" stroke-width="1.2" stroke-linecap="round"/>
+      <circle cx="40" cy="13" r="1.5" fill="rgb(220,210,255)"/>
+
+      <!-- COU -->
+      <path d="M 36,43 L 35,50 L 43,50 L 42,43 Z" fill="rgb(220,210,255)"/>
+      <!-- Ombre cou -->
+      <path d="M 39,43 L 38,50" fill="none" stroke="rgb(180,160,230)" stroke-width="0.7" opacity="0.5"/>
+
+      <!-- ÉPAULES / HAUT DU CORPS — robe/tunique -->
+      <!-- Tunique corps principal -->
+      <path d="
+        M 30,50
+        C 27,52 24,56 23,62
+        C 22,68 22,74 23,80
+        C 24,86 26,90 28,92
+        L 55,92
+        C 56,88 56,82 55,76
+        C 54,70 52,64 50,58
+        C 49,54 47,50 45,48
+        L 43,50
+        C 41,52 38,53 36,53
+        C 33,53 31,52 30,50
+        Z
+      " fill="rgb(109,40,217)"/>
+
+      <!-- Rehaut robe — zone claire centrale -->
+      <path d="
+        M 35,54
+        C 33,60 33,68 34,76
+        C 35,82 37,88 39,92
+        L 50,92
+        C 49,86 48,78 47,70
+        C 46,62 45,56 43,52
+        Z
+      " fill="rgb(139,92,246)" opacity="0.5"/>
+
+      <!-- Bretelle tunique -->
+      <path d="M 36,50 C 37,46 40,44 43,44 L 43,50" fill="none" stroke="rgb(80,40,160)" stroke-width="2" stroke-linecap="round"/>
+      <path d="M 30,50 C 31,46 33,44 36,44" fill="none" stroke="rgb(80,40,160)" stroke-width="2" stroke-linecap="round"/>
+
+      <!-- BRAS GAUCHE — levé vers haut de la harpe -->
+      <!-- Bras supérieur -->
+      <path d="
+        M 43,52
+        C 46,50 50,48 53,46
+        C 56,44 59,42 61,40
+        C 63,38 63,36 62,35
+        C 60,34 58,35 56,37
+        C 53,39 50,42 47,44
+        C 44,46 41,48 40,50
+        Z
+      " fill="rgb(220,210,255)"/>
+      <!-- Main sur corde haute -->
+      <path d="
+        M 60,35
+        C 62,34 64,34 65,36
+        C 64,38 62,38 61,37
+        Z
+      " fill="rgb(220,210,255)"/>
+      <!-- Doigts -->
+      <line x1="62" y1="35" x2="63" y2="32" stroke="rgb(220,210,255)" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="63" y1="36" x2="65" y2="33" stroke="rgb(220,210,255)" stroke-width="1.1" stroke-linecap="round"/>
+      <line x1="64" y1="37" x2="66" y2="35" stroke="rgb(220,210,255)" stroke-width="1.0" stroke-linecap="round"/>
+
+      <!-- BRAS DROIT — coude, avant-bras vers cordes basses -->
+      <path d="
+        M 38,58
+        C 40,60 44,64 48,68
+        C 51,71 54,72 57,71
+        C 59,70 60,68 59,66
+        C 57,65 55,65 53,64
+        C 50,62 47,59 44,56
+        C 42,54 40,53 38,54
+        Z
+      " fill="rgb(220,210,255)"/>
+      <!-- Main droite sur cordes basses -->
+      <path d="
+        M 57,70
+        C 59,70 61,69 62,68
+        C 61,66 59,66 58,67
+        Z
+      " fill="rgb(220,210,255)"/>
+      <line x1="60" y1="70" x2="62" y2="72" stroke="rgb(220,210,255)" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="61" y1="68" x2="63" y2="70" stroke="rgb(220,210,255)" stroke-width="1.1" stroke-linecap="round"/>
+
+    </g>
+
+    <!-- Contour hexagone au premier plan -->
+    <polygon points="50,3 91,26 91,74 50,97 9,74 9,26"
+      fill="none"
+      stroke="rgb(139,92,246)"
+      stroke-width="2.5"/>
+
+  </g>
+
+  <!-- ── Texte "Pheme" ── -->
+  <text
+    x="122" y="82"
+    font-family="'Playfair Display', 'Georgia', 'Times New Roman', serif"
+    font-weight="900"
+    font-size="72"
+    letter-spacing="-1"
+    fill="white">Pheme</text>
+
+  <!-- ── Tagline ── -->
+  <text
+    x="124" y="104"
+    font-family="'Courier New', monospace"
+    font-size="12"
+    letter-spacing="3.5"
+    fill="rgb(167,139,250)"
+    opacity="0.8">BARE-METAL RADIO</text>
+
+</svg>

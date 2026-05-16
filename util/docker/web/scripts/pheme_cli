@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+if [ `whoami` != 'pheme' ]; then
+    exec gosu pheme pheme_cli "$@"
+fi
+
+cd /var/pheme/www
+exec php bin/console "$@"
