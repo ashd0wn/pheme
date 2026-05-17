@@ -64,7 +64,7 @@ final class Environment
     // Database and Cache Configuration Variables
     public const DB_HOST = 'MYSQL_HOST';
     public const DB_PORT = 'MYSQL_PORT';
-    public const DB_NAME = 'MYSQL_DATABASE';
+    public const DB_NAME = 'MYSQL_DB';
     public const DB_USER = 'MYSQL_USER';
     public const DB_PASSWORD = 'MYSQL_PASSWORD';
 
@@ -337,7 +337,7 @@ final class Environment
             ),
             'password' => Types::string(
                 $this->data[self::DB_PASSWORD] ?? null,
-                'azur4c457',
+                '',
                 true
             ),
         ];
